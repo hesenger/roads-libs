@@ -1,3 +1,6 @@
+⚠️ This solution doesn't pass all the tests, for now I will not
+pay to see why it's failing.
+
 This is a solution to the HackerRank Roads and Libraries challenge:
 https://www.hackerrank.com/challenges/torque-and-development/problem
 
