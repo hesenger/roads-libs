@@ -49,11 +49,17 @@ function buildRoadsUsingBfs(origin, cities, queue, roads) {
   }
 
   queue.push(...city.connectedTo);
+  const visited = [];
   while (queue.length) {
     const neighborIndex = queue.shift();
+    if (visited.includes(neighborIndex)) {
+      continue;
+    }
+    visited.push(neighborIndex);
+
     const neighborCity = cities[neighborIndex];
     if (neighborCity.library) {
-      roads[origin] = neighborIndex; // connect origin to this library\
+      roads[origin] = neighborIndex; // connect origin to this library
       return;
     }
 
