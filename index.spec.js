@@ -1,6 +1,6 @@
 const roadsAndLibraries = require("./index");
 
-it("example 3 cities", () => {
+it("example 3 connected cities", () => {
   const res = roadsAndLibraries(3, 2, 1, [
     [1, 2],
     [3, 1],
@@ -21,7 +21,16 @@ it("most silly example where it's cheap to build lib than a road 🤷‍♂️",
   expect(res).toEqual(12);
 });
 
-it("NOT a challenge example: are needed 2 libs + roads", () => {
+it("there's an isolated city in this example", () => {
+  const res = roadsAndLibraries(5, 6, 1, [
+    [1, 2],
+    [1, 3],
+    [1, 4],
+  ]);
+  expect(res).toEqual(15);
+});
+
+it("this is NOT an example in the challend, I wrote that: are needed 2 libs + roads", () => {
   const res = roadsAndLibraries(6, 2, 1, [
     [1, 3],
     [3, 4],

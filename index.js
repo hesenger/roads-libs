@@ -11,6 +11,15 @@ function roadsAndLibraries(n, c_lib, c_road, connections) {
     return memo;
   }, {});
 
+  // fill keys for isolated cities (without any connection)
+  while (Object.keys(cities).length < n) {
+    cities[Object.keys(cities).length + 1] = {
+      library: false,
+      connectedTo: [],
+    };
+    break;
+  }
+
   let libraries = 0;
   const roads = {};
   Object.keys(cities).forEach((city) => {
