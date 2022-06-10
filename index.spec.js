@@ -30,6 +30,18 @@ it("there's an isolated city in this example", () => {
   expect(res).toEqual(15);
 });
 
+it("complex example described in the challenge", () => {
+  const res = roadsAndLibraries(8, 3, 2, [
+    [1, 7],
+    [1, 3],
+    [1, 2],
+    [2, 3],
+    [5, 6],
+    [6, 8],
+  ]);
+  expect(res).toEqual(17);
+});
+
 it("this is NOT an example in the challend, I wrote that: are needed 2 libs + roads", () => {
   const res = roadsAndLibraries(6, 2, 1, [
     [1, 3],
